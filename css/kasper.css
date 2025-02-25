@@ -115,12 +115,7 @@ header nav .toggle{
   color: white;
   font-size: 20px;
 }
-@media screen and (min-width:768px) {
-  header nav .toggle-menu{
-    display: none;
-  }
-  
-}
+
 header nav ul{
   display: flex;
 
@@ -147,6 +142,12 @@ header nav .toggle-menu{
   display: block;
   color: white;
   font-size: 20px;
+}
+@media screen and (min-width:767px) {
+  header nav .toggle-menu{
+    display: none;
+  }
+  
 }
 
 header nav ul li a{
@@ -208,5 +209,75 @@ header nav .form i{
   top: 50%;
   width: 50%;
   padding: 50px;
+  color: white;
   background-color: var(--transparent-color);
+  display: flex;
+  justify-content: flex-end;
+  
+}
+
+.landing .text .content{
+  max-width: 500px;
+
+}
+.landing .text h2{
+  font-size: 32px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-weight: normal;
+
+}
+.landing .text p{
+  font-size: 14px;
+  line-height: 2;
+}
+.landing .change-background{
+  position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+  color: white;
+    
+}
+.landing .fa-angle-left,
+.landing .fa-angle-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.landing .fa-angle-left {
+  left: 40px;
+}
+
+.landing .fa-angle-right {
+  right: 40px;
+}
+
+.landing .fa-angle-left:hover {
+  left: 30px;
+}
+
+.landing .fa-angle-right:hover {
+  right: 30px;
+}
+.landing .bullets{
+  position: absolute;
+  left:50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  display: flex;
+
+}
+.landing .bullets li{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid white;
+  margin-right: 10px;
+}
+.landing .bullets li.active{
+  background-color: white;
 }
