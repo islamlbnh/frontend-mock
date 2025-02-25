@@ -15,7 +15,7 @@ html{
 }
 body{
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: black;
+  
 }
 ul{
   list-style: none;
@@ -75,8 +75,34 @@ ul{
     max-width: 100%;
   }
 }
-
-
+/* start components */
+.main-heading{
+  text-align: center;
+}
+.main-heading h2{
+  font-weight: normal;
+  font-size: 40px;
+  position: relative;
+  margin-top: 70px;
+  text-transform: uppercase;
+}
+.main-heading ::before{
+  content: '';
+  position: absolute;
+  left: 50%;
+  height: 2px;
+  transform: translateX(-50%);
+  background-color: #333;
+  bottom: -30px;
+  width: 120px;
+}
+.main-heading h2::after{
+  content: '';
+}
+.main-heading p{
+  
+}
+/* end components */
 /* start Header */
 header{
     position: absolute;
@@ -220,6 +246,14 @@ header nav .form i{
   max-width: 500px;
 
 }
+@media screen and (max-width:767px){
+  .landing .text {
+    width: 100%;
+  }
+  .lanfing .text .content{
+    width: 100%;
+  }
+}
 .landing .text h2{
   font-size: 32px;
   margin-bottom: 20px;
@@ -237,6 +271,11 @@ header nav .form i{
   transform: translateY(50%);
   color: white;
     
+}
+@media screen and (max-width:767px){
+  .landing .change-background{
+    display: none;
+  }
 }
 .landing .fa-angle-left,
 .landing .fa-angle-right {
@@ -256,11 +295,11 @@ header nav .form i{
   right: 40px;
 }
 
-.landing .fa-angle-left:hover {
+.landing .fa-angle-left:hover{
   left: 30px;
 }
 
-.landing .fa-angle-right:hover {
+.landing .fa-angle-right:hover{
   right: 30px;
 }
 .landing .bullets{
@@ -279,5 +318,6 @@ header nav .form i{
   margin-right: 10px;
 }
 .landing .bullets li.active{
-  background-color: white;
+  background-color: var(--transparent-color);
+  border-color: var(--transparent-color);
 }
